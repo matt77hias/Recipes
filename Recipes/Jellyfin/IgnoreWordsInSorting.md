@@ -6,7 +6,6 @@
 ```xml
 <SortReplaceCharacters>
     <string>.</string>
-    <string>+</string>
     <string>%</string>
 </SortReplaceCharacters>
 ```

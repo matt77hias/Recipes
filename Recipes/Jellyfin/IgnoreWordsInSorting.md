@@ -1,8 +1,17 @@
 # Ignore Words in Sorting
 
 1. Go to `C:\ProgramData\Jellyfin\Server\config\system.xml`;
-2. Go to the `SortRemoveCharacters` scope;
-3. Add `", +`:
+2. Go to the `SortReplaceCharacters` scope;
+3. Remove `+`:
+```xml
+<SortReplaceCharacters>
+    <string>.</string>
+    <string>+</string>
+    <string>%</string>
+</SortReplaceCharacters>
+```
+4. Go to the `SortRemoveCharacters` scope;
+5. Add `", +`:
  ```xml
 <SortRemoveCharacters>
     <string>"</string>
@@ -15,8 +24,8 @@
     <string>'</string>
 </SortRemoveCharacters>
 ```
-4. Go to the `SortRemoveWords` scope;
-5. Add `A, An, Das, De, Der, Des, Die, Een, Ein, Eine, El, Gli, Het, Il, La, Las, Le, Les, Lo, Los, The, Un, Una, Une, Uno`:
+6. Go to the `SortRemoveWords` scope;
+7. Add `A, An, Das, De, Der, Des, Die, Een, Ein, Eine, El, Gli, Het, Il, La, Las, Le, Les, Lo, Los, The, Un, Una, Une, Uno`:
 ```xml
 <SortRemoveWords>
     <string>a</string>

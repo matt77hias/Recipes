@@ -3,7 +3,7 @@
 1. Go to `C:\ProgramData\Jellyfin\Server\config\system.xml`;
 2. Go to the `SortRemoveCharacters` scope;
 3. Add `", +`:
- ```
+ ```xml
 <SortRemoveCharacters>
     <string>"</string>
     <string>+</string>
@@ -17,7 +17,7 @@
 ```
 4. Go to the `SortRemoveWords` scope;
 5. Add `A, An, Das, De, Der, Des, Die, Een, Ein, Eine, El, Gli, Het, Il, La, Las, Le, Les, Lo, Los, The, Un, Una, Une, Uno`:
-```
+```xml
 <SortRemoveWords>
     <string>a</string>
     <string>an</string>

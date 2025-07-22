@@ -1,14 +1,5 @@
 # Set Subtitle
 
-## Create a custom `Set Subtitle` tag
-1. Go to `Edit` > `Edit Preferences`;
-2. Go to `Tags (1)` section;
-3. Go to `tag storage` subsection;
-4. Set `save MP3 tags as` to `ID3v2.4`;
-5. Go to `custom tags` subsection;
-6. Set `display name` of `custom ?` to `Set Subtitle`;
-7. Set `save to music file as tag` of `custom ?` to `Set Subtitle`;
-
 ## Create a virtual tag
 1. Go to `Edit` > `Edit Preferences`;
 2. Go to `Tags (1)` section;

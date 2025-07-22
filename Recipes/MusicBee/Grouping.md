@@ -1,4 +1,4 @@
-# Set Subtitle
+# Grouping
 
 ## Create a virtual tag
 1. Go to `Edit` > `Edit Preferences`;

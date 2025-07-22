@@ -17,7 +17,7 @@
 5. Set `label` to `Sub-Header`;
 6. Set `formula` to
 
-```$If(<Disc Count>>1,$IsNull(<Set Subtitle>,"• Disc "<Disc#>" •","• Disc "<Disc#>" • "<Set Subtitle>" •"),$IsNull(<Set Subtitle>,,"• "<Set Subtitle>" •"))```
+```$If(<Disc Count>>1,$IsNull(<Grouping>,"• Disc "<Disc#>" •","• Disc "<Disc#>" • "<Grouping>" •"),$IsNull(<Grouping>,,"• "<Grouping>" •"))```
 
 ## Use the virtual tag for the sub-grouping
 1. Set `Configure Layout` > `Main Panel` > `Album Covers`;

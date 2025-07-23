@@ -28,4 +28,4 @@ $if(%composersort%,%composersort%,$if($eql(%composer%,$regexp(%composer%,'^(A|An
 $if(%titlesort%,%titlesort%,$if($eql(%title%,$regexp(%title%,'^(A|An|Das|De|Der|Des|Die|Een|Ein|Eine|El|Gli|Het|Il|La|Las|Le|Les|Lo|Los|The|Un|Una|Une|Uno) (.+)','\2, \1')),%titlesort%,$regexp(%title%,'^(A|An|Das|De|Der|Des|Die|Een|Ein|Eine|El|Gli|Het|Il|La|Las|Le|Les|Lo|Los|The|Un|Una|Une|Uno) (.+)','\2, \1')))
 ```
 
-Do not run this script if tracks could have multiple ARTIST and/or COMPOSER atoms.
+Do not run this script if tracks could have multiple `ARTIST` and/or `COMPOSER` atoms.

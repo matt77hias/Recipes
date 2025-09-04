@@ -28,7 +28,8 @@
 ## Configure Album Covers view
 1. Go to `Main Panel` > `Album Covers`;
 2. Go to `Configure Layout` > `Main Panel` > `Customise Panel...`;
-3. Go to Show Settings
+3. Go to `Show Settings`;
+4. Set `fields displayed` to `Display Title (with Artist)`.
 
 ## Configure Album Panel view
 

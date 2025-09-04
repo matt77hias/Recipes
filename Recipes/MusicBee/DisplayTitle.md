@@ -1,6 +1,6 @@
 # Display Title
 
-## Create a virtual tag
+## Create virtual tags
 1. Go to `Edit` > `Edit Preferences`;
 2. Go to `Tags (1)` section;
 3. Go to `tag storage` subsection;
@@ -19,3 +19,25 @@
 10. Set `formula` to
 
 ```<Display Title>$If(<Artist>=<Album Artist>,,"    "{color: 140,140,140}[<Artist>])```
+
+## Configure Tracks view
+1. Go to `Main Panel` > `Tracks`;
+2. Go to `Set Displayed Fields...`;
+3. Select `Display Title`.
+
+## Configure Album Covers view
+1. Go to `Main Panel` > `Album Covers`;
+2. Go to `Configure Layout` > `Main Panel` > `Customise Panel...`;
+3. Go to Show Settings
+
+## Configure Album Panel view
+
+1. Go to `Music Explorer`;
+2. Go to `Configure Layout` > `Main Panel` > `Album Panel Settings...`;
+3. Set `fields displayed` to `Display Title (with Artist)`.
+
+## Configure TOP TRACKS view
+
+1. Go to `Music Explorer`;
+2. Go to `TOP TRACKS` > `Displayed Fields`;
+3. Select `Display Title`.

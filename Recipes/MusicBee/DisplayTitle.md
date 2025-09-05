@@ -41,12 +41,12 @@
 2. Go to `TOP TRACKS` > `Displayed Fields`;
 3. Select `Display Title`.
 
-## Mini Player
+## Mini Player: Configure view
 1. Go to `View` > `Mini Player`;
 2. Go to `Panel Layout` > `Customise Panel...`;
 3. Set `display fields` to `Display Title`.
 
-## Compact Player
+## Compact Player: Configure view
 Part 1
 1. Go to `View` > `Compact Player`;
 2. Go `Customise Panel...`;

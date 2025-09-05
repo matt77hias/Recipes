@@ -50,7 +50,7 @@
 1. Go to `View` > `Compact Player`;
 2. Go `Customise Panel...`;
 3. Go `to Track Information...`;
-4. Set `<Display Title>`;
+4. Set `<Display Title>`.
 
 1. Go to `View` > `Compact Player`;
 2. Go `Customise Panel...`;

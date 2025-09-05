@@ -20,25 +20,39 @@
 
 ```<Display Title>$If(<Artist>=<Album Artist>,,"    "{color: 140,140,140}[<Artist>])```
 
-## Configure Tracks view
+## Main Player: Configure Tracks view
 1. Go to `Main Panel` > `Tracks`;
 2. Go to `Set Displayed Fields...`;
 3. Select `Display Title`.
 
-## Configure Album Covers view
+## Main Player: Configure Album Covers view
 1. Go to `Main Panel` > `Album Covers`;
 2. Go to `Configure Layout` > `Main Panel` > `Customise Panel...`;
 3. Go to `Show Settings`;
 4. Set `fields displayed` to `Display Title (with Artist)`.
 
-## Configure Album Panel view
-
+## Main Player: Configure Album Panel view
 1. Go to `Music Explorer`;
 2. Go to `Configure Layout` > `Main Panel` > `Album Panel Settings...`;
 3. Set `fields displayed` to `Display Title (with Artist)`.
 
-## Configure TOP TRACKS view
-
+## Main Player: Configure TOP TRACKS view
 1. Go to `Music Explorer`;
 2. Go to `TOP TRACKS` > `Displayed Fields`;
 3. Select `Display Title`.
+
+## Mini Player
+1. Go to `View` > `Mini Player`;
+2. Go to `Panel Layout` > `Customise Panel...`;
+3. Set `display fields` to `Display Title`.
+
+## Compact Player
+1. Go to `View` > `Compact Player`;
+2. Go `Customise Panel...`;
+3. Go `to Track Information...`;
+4. Set `<Display Title>`;
+
+1. Go to `View` > `Compact Player`;
+2. Go `Customise Panel...`;
+3. Go to `Set Displayed Fields...`;
+4. Select `Display Title`.

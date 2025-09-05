@@ -50,11 +50,13 @@
 Part 1
 1. Go to `View` > `Compact Player`;
 2. Go `Customise Panel...`;
-3. Go `to Track Information...`;
-4. Set `<Display Title>`.
+3. Go to `right panel` subsection;
+4. Go `to Track Information...`;
+5. Set `<Display Title>`.
 
 Part 2
 1. Go to `View` > `Compact Player`;
 2. Go `Customise Panel...`;
-3. Go to `Set Displayed Fields...`;
-4. Select `Display Title`.
+3. Go to `right panel` subsection;
+4. Go to `Set Displayed Fields...`;
+5. Select `Display Title`.

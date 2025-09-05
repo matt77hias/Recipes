@@ -47,11 +47,13 @@
 3. Set `display fields` to `Display Title`.
 
 ## Compact Player
+Part 1
 1. Go to `View` > `Compact Player`;
 2. Go `Customise Panel...`;
 3. Go `to Track Information...`;
 4. Set `<Display Title>`.
 
+Part 2
 1. Go to `View` > `Compact Player`;
 2. Go `Customise Panel...`;
 3. Go to `Set Displayed Fields...`;

@@ -25,6 +25,11 @@
 2. Go to `Set Displayed Fields...`;
 3. Select `Display Title`.
 
+## Main Player: Configure Albums and Tracks view
+1. Go to `Main Panel` > `Albums and Tracks`;
+2. Go to `Set Displayed Fields...`;
+3. Select `Display Title`.
+
 ## Main Player: Configure Album Covers view
 1. Go to `Main Panel` > `Album Covers`;
 2. Go to `Configure Layout` > `Main Panel` > `Customise Panel...`;

@@ -1,6 +1,6 @@
 # Shader Build using DXC
 
-1. Add the shader targets to the VS project:
+1. Add the shader targets to each VS project:
 
 **Widget.vcxproj**:
 ```xml
@@ -13,7 +13,7 @@
 </Project>
 ```
 
-2. Add the shader files to the VS project:
+2. Add the shader files to their VS project:
 
 **Widget.vcxproj**:
 ```xml

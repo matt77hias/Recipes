@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright © 2016-2025 Matthias Moulin. All Rights Reserved. -->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CppFixup">
+    <ItemGroup>
+      <ClCompile Condition="'%(Filename)' != 'std'">
+		<RelativeBuildDir>$([MSBuild]::ValueOrDefault('%(RelativeDir)', '').Replace('\Code\', '\Build\$(PlatformShortName)\$(Configuration)\'))</RelativeBuildDir>
+      </ClCompile>
+      <ClCompile Condition="'%(Filename)' != 'std'">
+		<AssemblerListingLocation>%(ClCompile.RelativeBuildDir)</AssemblerListingLocation>
+		<ObjectFileName>%(ClCompile.RelativeBuildDir)</ObjectFileName>
+		<ModuleDependenciesFile>%(ClCompile.RelativeBuildDir)</ModuleDependenciesFile>
+		<ModuleOutputFile>%(ClCompile.RelativeBuildDir)</ModuleOutputFile>
+		<SourceDependenciesFile>%(ClCompile.RelativeBuildDir)</SourceDependenciesFile>
+		<XMLDocumentationFileName>%(ClCompile.RelativeBuildDir)</XMLDocumentationFileName>
+      </ClCompile>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+	<BeforeFixupCLCompileOptions>CppFixup;$(BeforeFixupCLCompileOptions)</BeforeFixupCLCompileOptions>
+	<ComputeCompileInputsTargets>CppFixup;$(ComputeCompileInputsTargets)</ComputeCompileInputsTargets>
+  </PropertyGroup>
+</Project>

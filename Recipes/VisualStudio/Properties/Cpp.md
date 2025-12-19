@@ -1,4 +1,4 @@
-# Centralized C++ configuration
+# Centralized C++ Configuration
 
 1. Add the c++ properties to the VS project:
 

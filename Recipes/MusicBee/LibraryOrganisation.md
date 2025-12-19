@@ -30,4 +30,4 @@
 
 ```$Group($Sort(<Album Artist>),1)\<Album Artist>\<Album>\$IsNull(<Disc-Track#>,,<Disc-Track#>" ")$If($Contains(<Title>,/),$Split(<Title>,:,1),<Title>)```
 
-`A: B` titles will be mapped to `A: B`, whereas `A: B / C` titles will be ampped to `A` (e.g., medleys).
+`A: B` titles will be mapped to `A: B`, whereas `A: B / C` titles will be mapped to `A` (e.g., medleys).

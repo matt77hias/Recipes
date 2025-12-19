@@ -1,6 +1,6 @@
 # Centralized C++ Configuration
 
-1. Add the c++ properties to each VS C++ project:
+1. Add the c++ properties to each VS project with C++ code:
 
 **Widget.vcxproj**:
 ```xml

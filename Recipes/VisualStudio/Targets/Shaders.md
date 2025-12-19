@@ -13,7 +13,7 @@
 </Project>
 ```
 
-2. Add the shader files to their VS project:
+2. Add the HLSL shader files to their VS project:
 
 **Widget.vcxproj**:
 ```xml

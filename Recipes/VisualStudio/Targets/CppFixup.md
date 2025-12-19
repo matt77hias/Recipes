@@ -1,6 +1,6 @@
 # Hierarchical Organization of Build Files
 
-1. Add the c++ fixup targets to each VS C++ project:
+1. Add the c++ fixup targets to each VS project with C++ code:
 
 **Widget.vcxproj**:
 ```xml

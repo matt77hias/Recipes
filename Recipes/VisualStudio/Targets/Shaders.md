@@ -1,6 +1,6 @@
 # Shader Build using DXC
 
-1. Add the shader targets to each VS project with HLSL code:
+1. Add the HLSL shader targets to each VS project with HLSL code:
 
 **Widget.vcxproj**:
 ```xml

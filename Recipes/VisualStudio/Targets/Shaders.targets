@@ -32,7 +32,7 @@
     </AvailableItemName>
   </ItemGroup>
   <ItemGroup>
-    <ShaderInput Include="$(CodeDir)Engine\**\*.hlsli" />
+    <ShaderInput Include="$(CodeDir)\**\*.hlsli" />
   </ItemGroup>
   <PropertyGroup>
     <ShaderArguments>-enable-16bit-types -O3 -Wconversion -WX</ShaderArguments>
@@ -98,7 +98,7 @@
       <ComputeShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -122,7 +122,7 @@
       <ComputeShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -146,7 +146,7 @@
       <DomainShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -170,7 +170,7 @@
       <GeometryShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -194,7 +194,7 @@
       <HullShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -218,7 +218,7 @@
       <ComputeShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -242,7 +242,7 @@
       <PixelShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -266,7 +266,7 @@
       <VertexShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -290,7 +290,7 @@
       <ShaderLibrary>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
-          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
@@ -306,3 +306,4 @@
   </Target>
   
 </Project>
+

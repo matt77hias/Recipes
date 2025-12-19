@@ -1,4 +1,4 @@
-# Shader Build
+# Shader Build using DXC
 
 1. Add the shader targets to the VS project:
 

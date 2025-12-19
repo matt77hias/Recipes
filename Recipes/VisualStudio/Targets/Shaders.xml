@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright © 2016-2025 Matthias Moulin. All Rights Reserved. -->
+<ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
+  <!-- AmplificationShader -->
+  <ItemType Name="AmplificationShader" DisplayName="Amplification Shader" />
+  <ContentType Name="AmplificationShader" ItemType="AmplificationShader" DisplayName="Amplification Shader" />
+  <FileExtension Name="as.hlsl" ContentType="AmplificationShader" />
+  <!-- ComputeShader -->
+  <ItemType Name="ComputeShader" DisplayName="Compute Shader" />
+  <ContentType Name="ComputeShader" ItemType="ComputeShader" DisplayName="Compute Shader" />
+  <FileExtension Name="cs.hlsl" ContentType="ComputeShader" />
+  <!-- DomainShader -->
+  <ItemType Name="DomainShader" DisplayName="Domain Shader" />
+  <ContentType Name="DomainShader" ItemType="DomainShader" DisplayName="Domain Shader" />
+  <FileExtension Name="ds.hlsl" ContentType="DomainShader" />
+  <!-- GeometryShader -->
+  <ItemType Name="GeometryShader" DisplayName="Geometry Shader" />
+  <ContentType Name="GeometryShader" ItemType="GeometryShader" DisplayName="Geometry Shader" />
+  <FileExtension Name="gs.hlsl" ContentType="GeometryShader" />
+  <!-- HullShader -->
+  <ItemType Name="HullShader" DisplayName="Hull Shader" />
+  <ContentType Name="HullShader" ItemType="HullShader" DisplayName="Hull Shader" />
+  <FileExtension Name="hs.hlsl" ContentType="HullShader" />
+  <!-- MeshShader -->
+  <ItemType Name="MeshShader" DisplayName="Mesh Shader" />
+  <ContentType Name="MeshShader" ItemType="MeshShader" DisplayName="Mesh Shader" />
+  <FileExtension Name="ms.hlsl" ContentType="MeshShader" />
+  <!-- PixelShader -->
+  <ItemType Name="PixelShader" DisplayName="Pixel Shader" />
+  <ContentType Name="PixelShader" ItemType="PixelShader" DisplayName="Pixel Shader" />
+  <FileExtension Name="ps.hlsl" ContentType="PixelShader" />
+  <!-- VertexShader -->
+  <ItemType Name="VertexShader" DisplayName="Vertex Shader" />
+  <ContentType Name="VertexShader" ItemType="VertexShader" DisplayName="Vertex Shader" />
+  <FileExtension Name="vs.hlsl" ContentType="VertexShader" />
+  <!-- ShaderLibrary -->
+  <ItemType Name="ShaderLibrary" DisplayName="Shader Library" />
+  <ContentType Name="ShaderLibrary" ItemType="ShaderLibrary" DisplayName="Shader Library" />
+  <FileExtension Name="lib.hlsl" ContentType="ShaderLibrary" />
+</ProjectSchemaDefinitions>

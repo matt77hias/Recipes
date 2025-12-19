@@ -1,4 +1,4 @@
-# Hierarchical build organization
+# Hierarchical Build Organization
 
 1. Add the c++ fixup targets to the VS project:
 

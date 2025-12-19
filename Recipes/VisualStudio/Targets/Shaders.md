@@ -56,7 +56,7 @@
     <ComputeShader Include="..\..\..\Code\Foo.ps.hlsl">
       <Filter>Source Files</Filter>
     </ComputeShader>
-    <ComputeShader Include="..\..\..\Code\Foo.ps.hlsl">
+    <ComputeShader Include="..\..\..\Code\Bar.ps.hlsl">
       <Filter>Source Files</Filter>
     </ComputeShader>
   </ItemGroup>
@@ -64,12 +64,12 @@
     <PixelShader Include="..\..\..\Code\Foo.ps.hlsl">
       <Filter>Source Files</Filter>
     </PixelShader>
-    <PixelShader Include="..\..\..\Code\Foo.ps.hlsl">
+    <PixelShader Include="..\..\..\Code\Bar.ps.hlsl">
       <Filter>Source Files</Filter>
     </PixelShader>
   </ItemGroup>
   <ItemGroup>
-    <VertexShader Include="..\..\..\Code\Bar.vs.hlsl">
+    <VertexShader Include="..\..\..\Code\Foo.vs.hlsl">
       <Filter>Source Files</Filter>
     </VertexShader>
     <VertexShader Include="..\..\..\Code\Bar.vs.hlsl">

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright © 2016-2025 Matthias Moulin. All Rights Reserved. -->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema Include="Shaders.xml" />
+    <AvailableItemName Include="AmplificationShader">
+      <Targets>AsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="ComputeShader">
+      <Targets>CsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="DomainShader">
+      <Targets>DsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="GeometryShader">
+      <Targets>GsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="HullShader">
+      <Targets>HsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="MeshShader">
+      <Targets>MsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="PixelShader">
+      <Targets>PsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="VertexShader">
+      <Targets>VsCompile</Targets>
+    </AvailableItemName>
+    <AvailableItemName Include="ShaderLibrary">
+      <Targets>LibCompile</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderInput Include="$(CodeDir)Engine\**\*.hlsli" />
+  </ItemGroup>
+  <PropertyGroup>
+    <ShaderArguments>-enable-16bit-types -O3 -Wconversion -WX</ShaderArguments>
+    <ShaderCompiler>"$(ToolsDir)DirectXShaderCompiler\dxc.exe"</ShaderCompiler>
+    <ShaderEntryPoint>Main</ShaderEntryPoint>
+    <ShaderInputs>@(ShaderInput)</ShaderInputs>
+    <ShaderTargetVersion>6_7</ShaderTargetVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <AmplificationShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>as_$(ShaderTargetVersion)</ShaderTarget>
+    </AmplificationShader>
+    <ComputeShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>cs_$(ShaderTargetVersion)</ShaderTarget>
+    </ComputeShader>
+    <DomainShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>ds_$(ShaderTargetVersion)</ShaderTarget>
+    </DomainShader>
+    <GeometryShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>gs_$(ShaderTargetVersion)</ShaderTarget>
+    </GeometryShader>
+    <HullShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>hs_$(ShaderTargetVersion)</ShaderTarget>
+    </HullShader>
+    <MeshShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>ms_$(ShaderTargetVersion)</ShaderTarget>
+    </MeshShader>
+    <PixelShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>ps_$(ShaderTargetVersion)</ShaderTarget>
+    </PixelShader>
+    <VertexShader>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>vs_$(ShaderTargetVersion)</ShaderTarget>
+    </VertexShader>
+    <ShaderLibrary>
+      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
+      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
+      <ShaderTarget>lib_$(ShaderTargetVersion)</ShaderTarget>
+    </ShaderLibrary>
+  </ItemDefinitionGroup>
+  
+  <!-- AsCompile -->
+  <Target Name="AsCompile" Condition="'@(AmplificationShader)' != ''" BeforeTargets="ClCompile">
+    
+	<Message Importance="High" Text="Building amplification shaders..." />
+	
+    <ItemGroup>
+      <ComputeShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </ComputeShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(AmplificationShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+	  
+  </Target>
+  
+  <!-- CsCompile -->
+  <Target Name="CsCompile" Condition="'@(ComputeShader)' != ''" BeforeTargets="ClCompile">
+    
+	<Message Importance="High" Text="Building compute shaders..." />
+	
+    <ItemGroup>
+      <ComputeShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </ComputeShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(ComputeShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+	  
+  </Target>
+  
+  <!-- DsCompile -->
+  <Target Name="DsCompile" Condition="'@(DomainShader)' != ''" BeforeTargets="ClCompile">
+    
+	<Message Importance="High" Text="Building domain shaders..." />
+	
+    <ItemGroup>
+      <DomainShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </DomainShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(DomainShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+  
+  </Target>
+  
+  <!-- GsCompile -->
+  <Target Name="GsCompile" Condition="'@(GeometryShader)' != ''" BeforeTargets="ClCompile">
+    
+	<Message Importance="High" Text="Building geometry shaders..." />
+	
+    <ItemGroup>
+      <GeometryShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </GeometryShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(GeometryShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+  
+  </Target>
+  
+  <!-- HsCompile -->
+  <Target Name="HsCompile" Condition="'@(HullShader)' != ''" BeforeTargets="ClCompile">
+  
+    <Message Importance="High" Text="Building hull shaders..." />
+	
+    <ItemGroup>
+      <HullShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </HullShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(HullShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+	
+  </Target>
+  
+  <!-- MsCompile -->
+  <Target Name="MsCompile" Condition="'@(MeshShader)' != ''" BeforeTargets="ClCompile">
+    
+	<Message Importance="High" Text="Building mesh shaders..." />
+	
+    <ItemGroup>
+      <ComputeShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </ComputeShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(MeshShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+	  
+  </Target>
+  
+  <!-- PsCompile -->
+  <Target Name="PsCompile" Condition="'@(PixelShader)' != ''" BeforeTargets="ClCompile">
+  
+    <Message Importance="High" Text="Building pixel shaders..." />
+	
+    <ItemGroup>
+      <PixelShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </PixelShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(PixelShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+	
+  </Target>
+  
+  <!-- VsCompile -->
+  <Target Name="VsCompile" Condition="'@(VertexShader)' != ''" BeforeTargets="ClCompile">
+  
+    <Message Importance="High" Text="Building vertex shaders..." />
+	
+    <ItemGroup>
+      <VertexShader>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </VertexShader>
+    </ItemGroup>
+	
+	<CustomBuild
+	  Sources="@(VertexShader)"
+	  MinimalRebuildFromTracking="true"
+	  TrackerLogDirectory="$(TLogLocation)"
+	  ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+	
+  </Target>
+
+  <!-- LibCompile -->
+  <Target Name="LibCompile" Condition="'@(ShaderLibrary)' != ''" BeforeTargets="ClCompile">
+
+    <Message Importance="High" Text="Building shader libraries..." />
+
+    <ItemGroup>
+      <ShaderLibrary>
+        <Message>%(Filename)%(Extension)</Message>
+        <Command>
+          $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)Engine" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
+        </Command>
+        <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
+        <Outputs>$(OutDir)%(Filename).cso</Outputs>
+      </ShaderLibrary>
+    </ItemGroup>
+
+    <CustomBuild
+      Sources="@(ShaderLibrary)"
+      MinimalRebuildFromTracking="true"
+      TrackerLogDirectory="$(TLogLocation)"
+      ErrorListRegex="(?'FILENAME'.+):(?'LINE'\d+):(?'COLUMN'\d+): (?'CATEGORY'error|warning): (?'TEXT'.*)" />
+
+  </Target>
+  
+</Project>

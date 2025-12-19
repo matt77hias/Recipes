@@ -1,4 +1,4 @@
-# Hierarchical Build Organization
+# Hierarchical Organization of Build Files
 
 1. Add the c++ fixup targets to the VS project:
 

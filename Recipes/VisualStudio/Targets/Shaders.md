@@ -2,7 +2,7 @@
 
 1. Add the shader targets to the VS project:
 
-Widget.vcxproj:
+**Widget.vcxproj**:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -15,7 +15,7 @@ Widget.vcxproj:
 
 2. Add the shader files to the VS project:
 
-Widget.vcxproj:
+**Widget.vcxproj**:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -39,7 +39,7 @@ Widget.vcxproj:
 ```
 (_Shader files, added after the shader targets, should be grouped automatically based on their file extension._)
 
-Widget.vcxproj.filters:
+**Widget.vcxproj.filters**:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

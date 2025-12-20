@@ -1,4 +1,4 @@
-# Auto-Fill Sort Tags
+# Auto-fill Sort Tags
 
 1. Go to `Actions` > `Actions`;
 2. Click `New` to create a new action group;

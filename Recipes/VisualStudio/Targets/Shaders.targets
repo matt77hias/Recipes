@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright © 2016-2025 Matthias Moulin. All Rights Reserved. -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Shader stages -->
   <ItemGroup>
     <PropertyPageSchema Include="Shaders.xml" />
     <AvailableItemName Include="AmplificationShader">
@@ -31,9 +33,13 @@
       <Targets>LibCompile</Targets>
     </AvailableItemName>
   </ItemGroup>
+
+  <!-- Shader dependencies -->
   <ItemGroup>
     <ShaderInput Include="$(CodeDir)\**\*.hlsli" />
   </ItemGroup>
+
+  <!-- Properties independent of the shader stage -->
   <PropertyGroup>
     <ShaderArguments>-enable-16bit-types -O3 -Wconversion -WX</ShaderArguments>
     <ShaderCompiler>"$(ToolsDir)DirectXShaderCompiler\dxc.exe"</ShaderCompiler>
@@ -41,6 +47,8 @@
     <ShaderInputs>@(ShaderInput)</ShaderInputs>
     <ShaderTargetVersion>6_7</ShaderTargetVersion>
   </PropertyGroup>
+
+  <!-- Properties dependent of the shader stage -->
   <ItemDefinitionGroup>
     <AmplificationShader>
       <ShaderArguments>$(ShaderArguments)</ShaderArguments>
@@ -306,6 +314,7 @@
   </Target>
   
 </Project>
+
 
 
 

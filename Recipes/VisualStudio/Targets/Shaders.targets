@@ -215,14 +215,14 @@
 	<Message Importance="High" Text="Building mesh shaders..." />
 	
     <ItemGroup>
-      <ComputeShader>
+      <MeshShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
           $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
-      </ComputeShader>
+      </MeshShader>
     </ItemGroup>
 	
 	<CustomBuild
@@ -306,5 +306,6 @@
   </Target>
   
 </Project>
+
 
 

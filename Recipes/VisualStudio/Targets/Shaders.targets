@@ -95,14 +95,14 @@
 	<Message Importance="High" Text="Building amplification shaders..." />
 	
     <ItemGroup>
-      <ComputeShader>
+      <AmplificationShader>
         <Message>%(Filename)%(Extension)</Message>
         <Command>
           $(ShaderCompiler) -T %(ShaderTarget) -E %(ShaderEntryPoint) %(Identity) -I "$(CodeDir)" %(ShaderArguments) -Fo "$(OutDir)%(Filename).cso"
         </Command>
         <AdditionalInputs>$(ShaderInputs)</AdditionalInputs>
         <Outputs>$(OutDir)%(Filename).cso</Outputs>
-      </ComputeShader>
+      </AmplificationShader>
     </ItemGroup>
 	
 	<CustomBuild
@@ -306,4 +306,5 @@
   </Target>
   
 </Project>
+
 

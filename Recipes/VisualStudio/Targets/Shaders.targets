@@ -51,48 +51,30 @@
   <!-- Properties dependent of the shader stage -->
   <ItemDefinitionGroup>
     <AmplificationShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>as_$(ShaderTargetVersion)</ShaderTarget>
     </AmplificationShader>
     <ComputeShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>cs_$(ShaderTargetVersion)</ShaderTarget>
     </ComputeShader>
     <DomainShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>ds_$(ShaderTargetVersion)</ShaderTarget>
     </DomainShader>
     <GeometryShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>gs_$(ShaderTargetVersion)</ShaderTarget>
     </GeometryShader>
     <HullShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>hs_$(ShaderTargetVersion)</ShaderTarget>
     </HullShader>
     <MeshShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>ms_$(ShaderTargetVersion)</ShaderTarget>
     </MeshShader>
     <PixelShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>ps_$(ShaderTargetVersion)</ShaderTarget>
     </PixelShader>
     <VertexShader>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>vs_$(ShaderTargetVersion)</ShaderTarget>
     </VertexShader>
     <ShaderLibrary>
-      <ShaderArguments>$(ShaderArguments)</ShaderArguments>
-      <ShaderEntryPoint>$(ShaderEntryPoint)</ShaderEntryPoint>
       <ShaderTarget>lib_$(ShaderTargetVersion)</ShaderTarget>
     </ShaderLibrary>
   </ItemDefinitionGroup>
@@ -314,6 +296,7 @@
   </Target>
   
 </Project>
+
 
 
 

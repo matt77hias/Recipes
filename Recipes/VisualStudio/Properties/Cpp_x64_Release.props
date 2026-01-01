@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright © 2016-2025 Matthias Moulin. All Rights Reserved. -->
+<!-- Copyright © 2016-2026 Matthias Moulin. All Rights Reserved. -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LinkIncremental>false</LinkIncremental>
